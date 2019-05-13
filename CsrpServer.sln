@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28306.52
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rapidnack.Common", "Rapidnack.Common\Rapidnack.Common.csproj", "{8EC10676-8726-4204-A9CA-C2D01D90E105}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rapidnack.Net", "Rapidnack.Net\Rapidnack.Net.csproj", "{DFB70FEA-CE2D-45C0-B839-E930C95737DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fx2lpTest", "Fx2lpTest\Fx2lpTest.csproj", "{102BCBA3-E0A4-45E6-B2F8-926699D726DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsrpServer", "CsrpServer\CsrpServer.csproj", "{C0B85FA1-9750-4B5F-9AA9-9FB9E2D92E65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonoCsrpServer", "MonoCsrpServer\MonoCsrpServer.csproj", "{A6634F6D-6F32-4712-B5E2-E5F02BE7936B}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "CsrpServerSetup", "CsrpServerSetup\CsrpServerSetup.vdproj", "{71F996BE-1684-4AC4-8666-F7B007AAD23B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8EC10676-8726-4204-A9CA-C2D01D90E105}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EC10676-8726-4204-A9CA-C2D01D90E105}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EC10676-8726-4204-A9CA-C2D01D90E105}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EC10676-8726-4204-A9CA-C2D01D90E105}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFB70FEA-CE2D-45C0-B839-E930C95737DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFB70FEA-CE2D-45C0-B839-E930C95737DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFB70FEA-CE2D-45C0-B839-E930C95737DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFB70FEA-CE2D-45C0-B839-E930C95737DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{102BCBA3-E0A4-45E6-B2F8-926699D726DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{102BCBA3-E0A4-45E6-B2F8-926699D726DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{102BCBA3-E0A4-45E6-B2F8-926699D726DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{102BCBA3-E0A4-45E6-B2F8-926699D726DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0B85FA1-9750-4B5F-9AA9-9FB9E2D92E65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0B85FA1-9750-4B5F-9AA9-9FB9E2D92E65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0B85FA1-9750-4B5F-9AA9-9FB9E2D92E65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0B85FA1-9750-4B5F-9AA9-9FB9E2D92E65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6634F6D-6F32-4712-B5E2-E5F02BE7936B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6634F6D-6F32-4712-B5E2-E5F02BE7936B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6634F6D-6F32-4712-B5E2-E5F02BE7936B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6634F6D-6F32-4712-B5E2-E5F02BE7936B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71F996BE-1684-4AC4-8666-F7B007AAD23B}.Debug|Any CPU.ActiveCfg = Debug
+		{71F996BE-1684-4AC4-8666-F7B007AAD23B}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4C4670C3-8039-4786-ADCC-4B3D8ADAAA9B}
+	EndGlobalSection
+EndGlobal
