@@ -31,7 +31,7 @@ $ sudo mono MonoCsrpServer.exe [サンプルレートの初期値(kHz)]
 
 # References
 
-[https://github.com/Rapidnack/Fx2lpSdrServer](https://github.com/Rapidnack/Fx2lpSdrServer)
+[https://github.com/Rapidnack/CsrpServer](https://github.com/Rapidnack/CsrpServer)
 
 [https://github.com/Rapidnack/gr-rapidnack](https://github.com/Rapidnack/gr-rapidnack)
 
