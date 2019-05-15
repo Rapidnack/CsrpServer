@@ -1,6 +1,7 @@
 # CsrpServer
 
 CsrpServerプロジェクトは、Intel FPGAとCypress EZ-USB FX2LPを使ったCSRP(Cheap Software Radio Peripheral)のWindows版サーバーとLinux版サーバーのソースコードです。
+ExtIO_USRPと通信するため、BorIPプロトコルを実装しています。
 
 ![構成図](http://rapidack.sakura.ne.jp/ttl/wp-content/uploads/2019/05/CsrpServer2.png)
 
