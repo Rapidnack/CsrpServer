@@ -4,21 +4,21 @@ CsrpServerプロジェクトは、Intel FPGAとCypress EZ-USB FX2LPを使ったC
 
 ![構成図](http://rapidack.sakura.ne.jp/ttl/wp-content/uploads/2019/05/CsrpServer2.png)
 
-# Windows版サーバー
+## Windows版サーバー
 
 WinFormsアプリケーションです。サーバーがEZ-USB FX2LPのRAMにファームウェアを書き込むのでEEPROMのジャンパーは外しておきます。
 
 ![Windows版サーバー](http://rapidack.sakura.ne.jp/ttl/wp-content/uploads/2019/05/CsrpServer.png)
 
-## Install
+### Install
 
 CsrpServerSetup/Releaseにあるインストーラを実行
 
-# Linux版サーバー
+## Linux版サーバー
 
 コンソールアプリケーションです。Monoとlibusb-1.0が必要です。サーバーがEZ-USB FX2LPのRAMにファームウェアを書き込むのでEEPROMのジャンパーは外しておきます。
 
-## Install
+### Install
 
 MonoCsrpServer/bin/MonoCsrpServerディレクトリごとコピーして
 ```
