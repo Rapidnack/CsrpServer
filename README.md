@@ -20,7 +20,7 @@ CsrpServerSetup/Releaseにあるインストーラを実行
 
 ### Install
 
-MonoCsrpServer/bin/MonoCsrpServerディレクトリごとコピーして
+MonoCsrpServer/bin/MonoCsrpServerディレクトリごとコピー
 ```
 $ sudo mono MonoCsrpServer.exe [サンプルレートの初期値(kHz)]
 ```
