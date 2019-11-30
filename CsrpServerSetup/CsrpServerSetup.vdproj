@@ -15,18 +15,6 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_12788DF18D784F772539C35B0816C690"
-        "OwnerKey" = "8:_84F13C31B33D4EF1ACF1CB394E61E6CA"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_20A7D9547ABD2064B2AD08B0EDD90738"
-        "OwnerKey" = "8:_84F13C31B33D4EF1ACF1CB394E61E6CA"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_42C93A54925A4454B831796082FFB641"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -45,13 +33,19 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_6CBF2FDD2DF0B8E0CC881CA052DAC9C9"
+        "OwnerKey" = "8:_84F13C31B33D4EF1ACF1CB394E61E6CA"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_84F13C31B33D4EF1ACF1CB394E61E6CA"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_C165C9C8D3DB28F71E208B80C5AFC789"
+        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_84F13C31B33D4EF1ACF1CB394E61E6CA"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -64,25 +58,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_84F13C31B33D4EF1ACF1CB394E61E6CA"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_20A7D9547ABD2064B2AD08B0EDD90738"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_C165C9C8D3DB28F71E208B80C5AFC789"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_12788DF18D784F772539C35B0816C690"
+        "OwnerKey" = "8:_6CBF2FDD2DF0B8E0CC881CA052DAC9C9"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -103,6 +79,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.6.1"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.6.1 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.6.1"
+                    }
+                }
+            }
         }
         "Release"
         {
@@ -119,6 +111,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.6.1"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.6.1 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.6.1"
+                    }
+                }
+            }
         }
     }
     "Deployable"
@@ -148,68 +156,6 @@
         }
         "File"
         {
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_12788DF18D784F772539C35B0816C690"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:CyUSB, Version=3.4.7.0, Culture=neutral, PublicKeyToken=01f1d2b6c851ae92, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_12788DF18D784F772539C35B0816C690"
-                    {
-                    "Name" = "8:CyUSB.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:CyUSB.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_27188B9A41E14EE3A417BB8350347762"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_20A7D9547ABD2064B2AD08B0EDD90738"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Rapidnack.Net, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_20A7D9547ABD2064B2AD08B0EDD90738"
-                    {
-                    "Name" = "8:Rapidnack.Net.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Rapidnack.Net.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_27188B9A41E14EE3A417BB8350347762"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_42C93A54925A4454B831796082FFB641"
             {
             "SourcePath" = "8:..\\CsrpServer\\Spi1FifoIn.iic"
@@ -237,11 +183,6 @@
             "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
-                    "_5C79A5D3B87E52F7F0802B790F4F0648"
-                    {
-                    "Name" = "8:System.Net.Http.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:System.Net.Http.dll"
             "TargetName" = "8:"
@@ -281,20 +222,15 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_C165C9C8D3DB28F71E208B80C5AFC789"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_6CBF2FDD2DF0B8E0CC881CA052DAC9C9"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Rapidnack.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:CyUSB, Version=3.4.7.0, Culture=neutral, PublicKeyToken=01f1d2b6c851ae92, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_C165C9C8D3DB28F71E208B80C5AFC789"
-                    {
-                    "Name" = "8:Rapidnack.Common.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
-            "SourcePath" = "8:Rapidnack.Common.dll"
+            "SourcePath" = "8:CyUSB.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_27188B9A41E14EE3A417BB8350347762"
@@ -327,17 +263,6 @@
             "Property" = "8:DesktopFolder"
                 "Folders"
                 {
-                    "{9EF0B969-E518-4E46-987F-47570745A589}:_272117573B7E4261AD36E75B39EF4AD2"
-                    {
-                    "Name" = "8:Rapidnack"
-                    "AlwaysCreate" = "11:FALSE"
-                    "Condition" = "8:"
-                    "Transitive" = "11:FALSE"
-                    "Property" = "8:_4A0507AE16F74F35B04992576402639B"
-                        "Folders"
-                        {
-                        }
-                    }
                 }
             }
             "{3C67513D-01DD-4637-8A68-80971EB9504F}:_27188B9A41E14EE3A417BB8350347762"
@@ -390,15 +315,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:CSRP Server"
-        "ProductCode" = "8:{85F92AFD-27A6-4733-B395-8D62EF0702D7}"
-        "PackageCode" = "8:{A2072EC1-68F4-47EC-85DC-163E9EA5A0CE}"
+        "ProductCode" = "8:{D1105580-58BC-4A2C-97AD-98BA2965BE7F}"
+        "PackageCode" = "8:{D76F520E-7E6E-4C49-A6C1-6BE6A0536C1D}"
         "UpgradeCode" = "8:{61CA6A20-F698-4B5A-9F7A-E2AE4032AD91}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.0"
+        "ProductVersion" = "8:1.0.1"
         "Manufacturer" = "8:Rapidnack"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -534,7 +459,7 @@
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
             "Target" = "8:_84F13C31B33D4EF1ACF1CB394E61E6CA"
-            "Folder" = "8:_272117573B7E4261AD36E75B39EF4AD2"
+            "Folder" = "8:_14705CB43B2B46F6B48F721F309548E5"
             "WorkingFolder" = "8:_27188B9A41E14EE3A417BB8350347762"
             "Icon" = "8:_610B3B6FE77B4E9D94EFB62C52CD18E1"
             "Feature" = "8:"

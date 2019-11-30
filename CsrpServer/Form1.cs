@@ -1,5 +1,7 @@
 ﻿using CyUSB;
 using System;
+using System.Diagnostics;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace CsrpServer
@@ -18,6 +20,9 @@ namespace CsrpServer
 
 		private void Form1_Load(object sender, EventArgs e)
 		{
+			FileVersionInfo ver = FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location);
+			this.Text = $"CSRP Server {ver.ProductMajorPart}.{ver.ProductMinorPart}.{ver.ProductPrivatePart}";
+
 			usbDevices = new USBDeviceList(CyConst.DEVICES_CYUSB);
 			usbDevices.DeviceAttached += new EventHandler(usbDevices_DeviceAttached);
 			usbDevices.DeviceRemoved += new EventHandler(usbDevices_DeviceRemoved);

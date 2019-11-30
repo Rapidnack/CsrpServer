@@ -308,7 +308,7 @@ namespace Rapidnack.Net
 			if (str.Trim() == string.Empty)
 				return; // keep alive
 
-			Console.WriteLine(str);
+			Console.WriteLine($"[in] {str}");
 
 			if (str.StartsWith("DEVICE -", StringComparison.CurrentCultureIgnoreCase) ||
 				str.StartsWith("DEVICE 0", StringComparison.CurrentCultureIgnoreCase))
@@ -338,7 +338,7 @@ namespace Rapidnack.Net
 						sequence = 0;
 						RunningState = ERunningState.Start;
 					}
-					WriteLine(ns, "RATE OK");
+					WriteLine(ns, $"RATE OK {Rate}.000");
 				}
 				else
 				{
@@ -480,7 +480,7 @@ namespace Rapidnack.Net
 		{
 			byte[] bytes = Encoding.ASCII.GetBytes(s + "\n");
 			ns.Write(bytes, 0, bytes.Length);
-			Console.WriteLine($"{s}");
+			Console.WriteLine($"[out] {s}");
 		}
 
 		private string ReadLine(NetworkStream ns)
