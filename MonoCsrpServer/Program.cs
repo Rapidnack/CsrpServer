@@ -2,6 +2,7 @@
 using MonoLibUsb.Profile;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -70,6 +71,11 @@ namespace MonoCsrpServer
 			MonoCsrpServer server = new MonoCsrpServer(64000000, rate, Session, profileList);
 			if (server == null)
 				return;
+
+			using (Process p = Process.GetCurrentProcess())
+			{
+				p.PriorityClass = ProcessPriorityClass.High;
+			}
 
 			try
 			{
