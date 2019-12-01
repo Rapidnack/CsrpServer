@@ -32,6 +32,11 @@ namespace CsrpServer
 			{
 				server.SetDevice();
 			}
+
+			using (Process p = Process.GetCurrentProcess())
+			{
+				p.PriorityClass = ProcessPriorityClass.High;
+			}
 		}
 
 		private void usbDevices_DeviceRemoved(object sender, EventArgs e)
