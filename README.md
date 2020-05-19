@@ -26,7 +26,7 @@ MonoCsrpServer/bin/MonoCsrpServerディレクトリごとコピー
 $ sudo mono MonoCsrpServer.exe [サンプルレートの初期値(kHz)]
 ```
   
-# MAX1000_SDR_FX2LP
+# FPGA/MAX1000_SDR_FX2LP
 
 MAX1000_SDR_FX2LPプロジェクトは、Intel MAX10 FPGAとCypress EZ-USB FX2LPを使ったCSRP(Cheap Software Radio Peripheral)のVerilogソースコードです。
 
@@ -37,7 +37,7 @@ MAX1000_SDR_FX2LPプロジェクトは、Intel MAX10 FPGAとCypress EZ-USB FX2LP
 - USBコントローラ: Cypress EZ-USB FX2LP
 - ADC: Analog Devices AD9283
 
-# MAX10FB_SDR_FX2LP
+# FPGA/MAX10FB_SDR_FX2LP
 
 MAX10FB_SDR_FX2LPプロジェクトは、Intel MAX10 FPGAとCypress EZ-USB FX2LPを使ったCSRP(Cheap Software Radio Peripheral)のVerilogソースコードです。
 
@@ -48,7 +48,7 @@ MAX10FB_SDR_FX2LPプロジェクトは、Intel MAX10 FPGAとCypress EZ-USB FX2LP
 - USBコントローラ: Cypress EZ-USB FX2LP
 - ADC: Analog Devices AD9283
 
-# CYC4_SDR_FX2LP
+# FPGA/CYC4_SDR_FX2LP
 
 CYC4_SDR_FX2LPプロジェクトは、Intel Cyclone IV FPGAとCypress EZ-USB FX2LPを使ったCSRP(Cheap Software Radio Peripheral)のVerilogソースコードです。
 
@@ -59,7 +59,7 @@ CYC4_SDR_FX2LPプロジェクトは、Intel Cyclone IV FPGAとCypress EZ-USB FX2
 - USBコントローラ: Cypress EZ-USB FX2LP
 - ADC: Analog Devices AD9283
 
-# CYC2_SDR_FX2LP
+# FPGA/CYC2_SDR_FX2LP
 
 CYC2_SDR_FX2LPプロジェクトは、Intel Cyclone II FPGAとCypress EZ-USB FX2LPを使ったCSRP(Cheap Software Radio Peripheral)のVerilogソースコードです。
 
