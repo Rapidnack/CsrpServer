@@ -1,0 +1,27 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst QsysCore.MySendToFX2LP_0 -pg 1 -lvl 3 -y 390
+preplace inst QsysCore.dc_fifo_0 -pg 1 -lvl 2 -y 270
+preplace inst QsysCore.spi_slave_to_avalon_mm_master_bridge_0 -pg 1 -lvl 2 -y 170
+preplace inst QsysCore.pio_0 -pg 1 -lvl 3 -y 30
+preplace inst QsysCore.pio_1 -pg 1 -lvl 3 -y 130
+preplace inst QsysCore -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst QsysCore.clk_0 -pg 1 -lvl 1 -y 150
+preplace inst QsysCore.clk_1 -pg 1 -lvl 1 -y 430
+preplace netloc EXPORT<net_container>QsysCore</net_container>(SLAVE)dc_fifo_0.in,(SLAVE)QsysCore.dc_fifo_0_in) 1 0 2 NJ 280 NJ
+preplace netloc EXPORT<net_container>QsysCore</net_container>(SLAVE)clk_0.clk_in,(SLAVE)QsysCore.clk) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>QsysCore</net_container>(MASTER)clk_0.clk,(SLAVE)pio_0.clk,(SLAVE)pio_1.clk,(SLAVE)dc_fifo_0.in_clk,(SLAVE)spi_slave_to_avalon_mm_master_bridge_0.clk) 1 1 2 430 160 660
+preplace netloc EXPORT<net_container>QsysCore</net_container>(SLAVE)QsysCore.clk_0,(SLAVE)clk_1.clk_in) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>QsysCore</net_container>(SLAVE)pio_1.s1,(MASTER)spi_slave_to_avalon_mm_master_bridge_0.avalon_master,(SLAVE)pio_0.s1) 1 2 1 700
+preplace netloc EXPORT<net_container>QsysCore</net_container>(SLAVE)clk_1.clk_in_reset,(SLAVE)QsysCore.reset_0) 1 0 1 NJ
+preplace netloc EXPORT<net_container>QsysCore</net_container>(SLAVE)clk_0.clk_in_reset,(SLAVE)QsysCore.reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>QsysCore</net_container>(SLAVE)QsysCore.mysendtofx2lp_0_fx2lp,(SLAVE)MySendToFX2LP_0.fx2lp) 1 0 3 NJ 420 NJ 420 NJ
+preplace netloc EXPORT<net_container>QsysCore</net_container>(SLAVE)QsysCore.spi_slave_to_avalon_mm_master_bridge_0_export_0,(SLAVE)spi_slave_to_avalon_mm_master_bridge_0.export_0) 1 0 2 NJ 220 NJ
+preplace netloc EXPORT<net_container>QsysCore</net_container>(SLAVE)QsysCore.pio_1_external_connection,(SLAVE)pio_1.external_connection) 1 0 3 NJ 140 NJ 140 NJ
+preplace netloc EXPORT<net_container>QsysCore</net_container>(SLAVE)QsysCore.pio_0_external_connection,(SLAVE)pio_0.external_connection) 1 0 3 NJ 60 NJ 60 NJ
+preplace netloc FAN_OUT<net_container>QsysCore</net_container>(SLAVE)dc_fifo_0.out_clk_reset,(MASTER)clk_1.clk_reset,(SLAVE)MySendToFX2LP_0.reset) 1 1 2 430 460 NJ
+preplace netloc FAN_OUT<net_container>QsysCore</net_container>(SLAVE)pio_1.reset,(MASTER)clk_0.clk_reset,(SLAVE)spi_slave_to_avalon_mm_master_bridge_0.clk_reset,(SLAVE)pio_0.reset,(SLAVE)dc_fifo_0.in_clk_reset) 1 1 2 410 260 680
+preplace netloc FAN_OUT<net_container>QsysCore</net_container>(SLAVE)MySendToFX2LP_0.clock,(MASTER)clk_1.clk,(SLAVE)dc_fifo_0.out_clk) 1 1 2 410 400 NJ
+preplace netloc POINT_TO_POINT<net_container>QsysCore</net_container>(SLAVE)MySendToFX2LP_0.in0,(MASTER)dc_fifo_0.out) 1 2 1 660
+levelinfo -pg 1 0 200 910
+levelinfo -hier QsysCore 210 240 460 750 900

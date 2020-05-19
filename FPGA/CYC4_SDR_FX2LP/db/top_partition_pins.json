@@ -1,0 +1,113 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "SPI_MISO",
+					"strict" : false
+				},
+				{
+					"name" : "FD[0]",
+					"strict" : false
+				},
+				{
+					"name" : "FD[1]",
+					"strict" : false
+				},
+				{
+					"name" : "FD[2]",
+					"strict" : false
+				},
+				{
+					"name" : "FD[3]",
+					"strict" : false
+				},
+				{
+					"name" : "FD[4]",
+					"strict" : false
+				},
+				{
+					"name" : "FD[5]",
+					"strict" : false
+				},
+				{
+					"name" : "FD[6]",
+					"strict" : false
+				},
+				{
+					"name" : "FD[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SLWR",
+					"strict" : false
+				},
+				{
+					"name" : "LED[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SPI_NSS",
+					"strict" : false
+				},
+				{
+					"name" : "FLAG[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SPI_SCLK",
+					"strict" : false
+				},
+				{
+					"name" : "SPI_MOSI",
+					"strict" : false
+				},
+				{
+					"name" : "ADC[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ADC[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ADC[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ADC[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ADC[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ADC[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ADC[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ADC[7]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

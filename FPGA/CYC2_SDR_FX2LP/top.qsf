@@ -1,0 +1,137 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+# Date created = 05:54:30  May 10, 2019
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		top_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone II"
+set_global_assignment -name DEVICE EP2C5T144C8
+set_global_assignment -name TOP_LEVEL_ENTITY top
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "05:54:30  MAY 10, 2019"
+set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_location_assignment PIN_17 -to CLK
+set_location_assignment PIN_9 -to LED[2]
+set_location_assignment PIN_7 -to LED[1]
+set_location_assignment PIN_3 -to LED[0]
+set_location_assignment PIN_40 -to SPI_NSS
+set_location_assignment PIN_44 -to SPI_SCLK
+set_location_assignment PIN_47 -to SPI_MISO
+set_location_assignment PIN_52 -to SPI_MOSI
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to CLK
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to LED[2]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to LED[1]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to LED[0]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SPI_MISO
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SPI_MOSI
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SPI_NSS
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SPI_SCLK
+set_global_assignment -name QIP_FILE rom2sin.qip
+set_global_assignment -name QIP_FILE ram16x256.qip
+set_global_assignment -name QIP_FILE pll.qip
+set_global_assignment -name VERILOG_FILE MySendToFX2LP.v
+set_global_assignment -name VERILOG_FILE MyNCO.v
+set_global_assignment -name VERILOG_FILE MyFIR.v
+set_global_assignment -name VERILOG_FILE MyCIC.v
+set_global_assignment -name QIP_FILE QsysCore/synthesis/QsysCore.qip
+set_global_assignment -name VERILOG_FILE top.v
+set_location_assignment PIN_142 -to ENCODE
+set_location_assignment PIN_118 -to ADC[0]
+set_location_assignment PIN_120 -to ADC[1]
+set_location_assignment PIN_122 -to ADC[2]
+set_location_assignment PIN_126 -to ADC[3]
+set_location_assignment PIN_132 -to ADC[4]
+set_location_assignment PIN_134 -to ADC[5]
+set_location_assignment PIN_136 -to ADC[6]
+set_location_assignment PIN_139 -to ADC[7]
+set_location_assignment PIN_70 -to FD[0]
+set_location_assignment PIN_69 -to FD[1]
+set_location_assignment PIN_72 -to FD[2]
+set_location_assignment PIN_71 -to FD[3]
+set_location_assignment PIN_59 -to FD[4]
+set_location_assignment PIN_60 -to FD[5]
+set_location_assignment PIN_57 -to FD[6]
+set_location_assignment PIN_58 -to FD[7]
+set_location_assignment PIN_53 -to FLAG[0]
+set_location_assignment PIN_55 -to FLAG[1]
+set_location_assignment PIN_51 -to FLAG[2]
+set_location_assignment PIN_48 -to SLOE
+set_location_assignment PIN_45 -to FIFOADR[0]
+set_location_assignment PIN_42 -to FIFOADR[1]
+set_location_assignment PIN_43 -to PKTEND
+set_location_assignment PIN_65 -to IFCLK
+set_location_assignment PIN_64 -to SLRD
+set_location_assignment PIN_63 -to SLWR
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to ADC[7]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to ADC[6]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to ADC[5]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to ADC[4]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to ADC[3]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to ADC[2]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to ADC[1]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to ADC[0]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to ENCODE
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to FD[7]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to FD[6]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to FD[5]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to FD[4]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to FD[3]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to FD[2]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to FD[1]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to FD[0]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to FIFOADR[1]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to FLAG[2]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to FIFOADR[0]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to FLAG[1]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to FLAG[0]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SLWR
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SLRD
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to SLOE
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to PKTEND
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to IFCLK
+set_global_assignment -name QIP_FILE pll40m.qip
+set_location_assignment PIN_92 -to CLKOUT40M
+set_location_assignment PIN_91 -to CLK4
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to CLK4
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to CLKOUT40M
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

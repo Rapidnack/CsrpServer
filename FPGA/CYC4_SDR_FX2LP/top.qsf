@@ -1,0 +1,108 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2018  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+# Date created = 22:07:44  May 08, 2019
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		top_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE6E22C8
+set_global_assignment -name TOP_LEVEL_ENTITY top
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "22:07:44  MAY 08, 2019"
+set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+set_global_assignment -name ENABLE_OCT_DONE OFF
+set_global_assignment -name USE_CONFIGURATION_DEVICE OFF
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_88 -to CLK
+set_location_assignment PIN_30 -to LED[3]
+set_location_assignment PIN_31 -to LED[2]
+set_location_assignment PIN_32 -to LED[1]
+set_location_assignment PIN_28 -to LED[0]
+set_location_assignment PIN_67 -to FD[0]
+set_location_assignment PIN_66 -to FD[1]
+set_location_assignment PIN_69 -to FD[2]
+set_location_assignment PIN_68 -to FD[3]
+set_location_assignment PIN_55 -to FD[4]
+set_location_assignment PIN_58 -to FD[5]
+set_location_assignment PIN_53 -to FD[6]
+set_location_assignment PIN_54 -to FD[7]
+set_location_assignment PIN_11 -to ENCODE
+set_location_assignment PIN_129 -to ADC[0]
+set_location_assignment PIN_133 -to ADC[1]
+set_location_assignment PIN_136 -to ADC[2]
+set_location_assignment PIN_138 -to ADC[3]
+set_location_assignment PIN_142 -to ADC[4]
+set_location_assignment PIN_144 -to ADC[5]
+set_location_assignment PIN_2 -to ADC[6]
+set_location_assignment PIN_7 -to ADC[7]
+set_location_assignment PIN_51 -to FLAG[0]
+set_location_assignment PIN_52 -to FLAG[1]
+set_location_assignment PIN_49 -to FLAG[2]
+set_location_assignment PIN_50 -to SPI_MOSI
+set_location_assignment PIN_44 -to SPI_MISO
+set_location_assignment PIN_46 -to SLOE
+set_location_assignment PIN_42 -to SPI_SCLK
+set_location_assignment PIN_43 -to FIFOADR[0]
+set_location_assignment PIN_38 -to FIFOADR[1]
+set_location_assignment PIN_39 -to PKTEND
+set_location_assignment PIN_33 -to SPI_NSS
+set_location_assignment PIN_60 -to SLRD
+set_location_assignment PIN_59 -to SLWR
+set_location_assignment PIN_64 -to IFCLK
+set_global_assignment -name VERILOG_FILE MySendToFX2LP.v
+set_global_assignment -name QIP_FILE QsysCore/synthesis/QsysCore.qip
+set_global_assignment -name QIP_FILE romsin.qip
+set_global_assignment -name QIP_FILE ram16x256.qip
+set_global_assignment -name QIP_FILE pll.qip
+set_global_assignment -name VERILOG_FILE MyNCO.v
+set_global_assignment -name VERILOG_FILE MyFIR.v
+set_global_assignment -name VERILOG_FILE MyCIC.v
+set_global_assignment -name VERILOG_FILE top.v
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

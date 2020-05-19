@@ -1,0 +1,88 @@
+Quartus Prime Archive log --	C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/top_tmp_archive.qarlog
+
+Archive:	C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/top_tmp_archive.qar
+Date:		Sun May 10 15:59:29 2020
+Quartus Prime		18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/MyCIC.v
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/MyFIR.v
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/MyNCO.v
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/MySendToFX2LP.v
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/MySendToFX2LP_hw.tcl
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/QsysCore.qsys
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/QsysCore.sopcinfo
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/QsysCore/QsysCore.cmp
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/QsysCore/synthesis/QsysCore.debuginfo
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/QsysCore/synthesis/QsysCore.qip
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/QsysCore/synthesis/QsysCore.regmap
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/QsysCore/synthesis/QsysCore.v
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/QsysCore/synthesis/submodules/MySendToFX2LP.v
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/QsysCore/synthesis/submodules/QsysCore_fifo_0.sdc
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/QsysCore/synthesis/submodules/QsysCore_mm_interconnect_0.v
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/QsysCore/synthesis/submodules/QsysCore_mm_interconnect_0_avalon_st_adapter.v
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/QsysCore/synthesis/submodules/QsysCore_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/QsysCore/synthesis/submodules/QsysCore_mm_interconnect_0_cmd_demux.sv
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/QsysCore/synthesis/submodules/QsysCore_mm_interconnect_0_cmd_mux.sv
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/QsysCore/synthesis/submodules/QsysCore_mm_interconnect_0_router.sv
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/QsysCore/synthesis/submodules/QsysCore_mm_interconnect_0_router_001.sv
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/QsysCore/synthesis/submodules/QsysCore_mm_interconnect_0_rsp_demux.sv
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/QsysCore/synthesis/submodules/QsysCore_mm_interconnect_0_rsp_mux.sv
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/QsysCore/synthesis/submodules/QsysCore_pio_0.v
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/QsysCore/synthesis/submodules/SPISlaveToAvalonMasterBridge.v
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/QsysCore/synthesis/submodules/altera_avalon_dc_fifo.sdc
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/QsysCore/synthesis/submodules/altera_avalon_dc_fifo.v
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/QsysCore/synthesis/submodules/altera_avalon_packets_to_master.v
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/QsysCore/synthesis/submodules/altera_avalon_packets_to_master_inst_for_spichain.v
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/QsysCore/synthesis/submodules/altera_avalon_sc_fifo.v
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/QsysCore/synthesis/submodules/altera_avalon_st_bytes_to_packets.v
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/QsysCore/synthesis/submodules/altera_avalon_st_bytes_to_packets_inst_for_spichain.v
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/QsysCore/synthesis/submodules/altera_avalon_st_packets_to_bytes.v
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/QsysCore/synthesis/submodules/altera_avalon_st_packets_to_bytes_inst_for_spichain.v
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/QsysCore/synthesis/submodules/altera_avalon_st_pipeline_base.v
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/QsysCore/synthesis/submodules/altera_dcfifo_synchronizer_bundle.v
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/QsysCore/synthesis/submodules/altera_merlin_arbitrator.sv
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/QsysCore/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/QsysCore/synthesis/submodules/altera_merlin_master_agent.sv
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/QsysCore/synthesis/submodules/altera_merlin_master_translator.sv
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/QsysCore/synthesis/submodules/altera_merlin_reorder_memory.sv
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/QsysCore/synthesis/submodules/altera_merlin_slave_agent.sv
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/QsysCore/synthesis/submodules/altera_merlin_slave_translator.sv
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/QsysCore/synthesis/submodules/altera_merlin_traffic_limiter.sv
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/QsysCore/synthesis/submodules/altera_reset_controller.sdc
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/QsysCore/synthesis/submodules/altera_reset_controller.v
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/QsysCore/synthesis/submodules/altera_reset_synchronizer.v
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/QsysCore/synthesis/submodules/altera_std_synchronizer_nocut.v
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/QsysCore/synthesis/submodules/channel_adapter_btop_for_spichain.v
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/QsysCore/synthesis/submodules/channel_adapter_ptob_for_spichain.v
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/QsysCore/synthesis/submodules/spiphyslave.sdc
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/QsysCore/synthesis/submodules/spiphyslave.v
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/QsysCore/synthesis/submodules/spislave_inst_for_spichain.v
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/assignment_defaults.qdf
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/pll.ppf
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/pll.qip
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/pll.v
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/pll_bb.v
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/pll_inst.v
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/ram16x256.qip
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/ram16x256.v
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/ram16x256_bb.v
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/ram16x256_inst.v
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/romsin.mif
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/romsin.qip
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/romsin.v
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/romsin_bb.v
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/romsin_inst.v
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/top.qpf
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/top.qsf
+C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/top.v
+	======= Total: 71 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Sun May 10 15:59:37 2020
+Source archive file:	C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP/top_tmp_archive.qar
+Archive was extracted into	C:/intelFPGA_lite/18.1/projects/MAX1000_SDR_FX2LP_copy/
+		 - successfully.
