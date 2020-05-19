@@ -1,0 +1,9 @@
+"fw.obj",
+"Spi1FifoIn.obj",
+"dscr.obj",
+"..\..\Target\Lib\LP\USBJmpTb.OBJ",
+"..\..\Target\Lib\LP\EZUSB.LIB" 
+TO "Spi1FifoIn" 
+RAMSIZE(256) 
+CODE( 0x80-0x0FFF )
+XDATA( 0x1000 )

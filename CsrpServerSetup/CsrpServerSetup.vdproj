@@ -64,13 +64,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_D6957DCE9C70AB1A5D8FB1267A55D49F"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_0619D4DF75A8D95755B64A56819AB135"
+        "OwnerKey" = "8:_5C79A5D3B87E52F7F0802B790F4F0648"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -82,7 +76,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_5C79A5D3B87E52F7F0802B790F4F0648"
+        "OwnerKey" = "8:_0619D4DF75A8D95755B64A56819AB135"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_D6957DCE9C70AB1A5D8FB1267A55D49F"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -187,11 +187,6 @@
             "AssemblyAsmDisplayName" = "8:Rapidnack.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_0619D4DF75A8D95755B64A56819AB135"
-                    {
-                    "Name" = "8:Rapidnack.Common.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Rapidnack.Common.dll"
             "TargetName" = "8:"
@@ -238,11 +233,6 @@
             "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
-                    "_5C79A5D3B87E52F7F0802B790F4F0648"
-                    {
-                    "Name" = "8:System.Net.Http.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:System.Net.Http.dll"
             "TargetName" = "8:"
@@ -289,11 +279,6 @@
             "AssemblyAsmDisplayName" = "8:CyUSB, Version=3.4.7.0, Culture=neutral, PublicKeyToken=01f1d2b6c851ae92, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_6CBF2FDD2DF0B8E0CC881CA052DAC9C9"
-                    {
-                    "Name" = "8:CyUSB.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:CyUSB.dll"
             "TargetName" = "8:"
@@ -320,11 +305,6 @@
             "AssemblyAsmDisplayName" = "8:Rapidnack.Net, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_D6957DCE9C70AB1A5D8FB1267A55D49F"
-                    {
-                    "Name" = "8:Rapidnack.Net.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Rapidnack.Net.dll"
             "TargetName" = "8:"
@@ -411,15 +391,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:CSRP Server"
-        "ProductCode" = "8:{6CAD55A0-FD2C-44AB-8B17-D60DCDF8F0B2}"
-        "PackageCode" = "8:{1E1B0685-B7AF-439B-9377-5185598A70C5}"
+        "ProductCode" = "8:{5EC2AE68-FCAE-4ED0-B187-FBC2A89699C8}"
+        "PackageCode" = "8:{B7D23FDE-FD42-431A-AAFC-06BE7D2215C5}"
         "UpgradeCode" = "8:{61CA6A20-F698-4B5A-9F7A-E2AE4032AD91}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.2"
+        "ProductVersion" = "8:1.0.3"
         "Manufacturer" = "8:Rapidnack"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"

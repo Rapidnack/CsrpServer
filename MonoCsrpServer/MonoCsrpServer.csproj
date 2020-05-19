@@ -54,9 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Spi1FifoIn.iic">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <None Include="Spi1FifoIn.iic" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Rapidnack.Net\Rapidnack.Net.csproj">

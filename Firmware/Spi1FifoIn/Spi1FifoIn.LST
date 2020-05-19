@@ -1,0 +1,377 @@
+C51 COMPILER V7.07   SPI1FIFOIN                                                            05/19/2020 11:37:33 PAGE 1   
+
+
+C51 COMPILER V7.07, COMPILATION OF MODULE SPI1FIFOIN
+OBJECT MODULE PLACED IN Spi1FifoIn.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE Spi1FifoIn.c BROWSE DEBUG OBJECTEXTEND TABS(3)
+
+stmt level    source
+
+   1          #pragma NOIV               // Do not generate interrupt vectors
+   2          
+   3          #include "fx2.h"
+   4          #include "fx2regs.h"
+   5          #include "syncdly.h"            // SYNCDELAY macro
+   6          
+   7          extern BOOL GotSUD;             // Received setup data flag
+   8          extern BOOL Sleep;
+   9          extern BOOL Rwuen;
+  10          extern BOOL Selfpwr;
+  11          
+  12          BYTE Configuration;             // Current configuration
+  13          BYTE AlternateSetting;          // Alternate settings
+  14          
+  15          #define SPI_CS  PA7
+  16          #define SPI_CLK PA3
+  17          #define MISO    PA1
+  18          #define MOSI    PA0
+  19          
+  20          //-----------------------------------------------------------------------------
+  21          // Task Dispatcher hooks
+  22          //   The following hooks are called by the task dispatcher.
+  23          //-----------------------------------------------------------------------------
+  24          
+  25          BYTE SPIXferByte(BYTE b)
+  26          {
+  27   1         // SPI mode 1
+  28   1      
+  29   1         BYTE val = 0x00;
+  30   1         BYTE mask = 0x80;
+  31   1         int i;
+  32   1      
+  33   1         for (i = 0; i < 8; i++)
+  34   1         {
+  35   2            if (b & mask) MOSI = 1; else MOSI = 0;
+  36   2            SPI_CLK = 1;
+  37   2            if (MISO == 1) val |= mask;
+  38   2            SPI_CLK = 0;
+  39   2            mask >>= 1;
+  40   2         }
+  41   1         return(val);
+  42   1      }
+  43          
+  44          void TD_Init(void)             // Called once at startup
+  45          {
+  46   1         CPUCS = ((CPUCS & ~bmCLKSPD) | bmCLKSPD1) ; // 48 MHz CPU clock
+  47   1      
+  48   1         REVCTL = 0x03; // REVCTL.0 and REVCTL.1 set to 1
+  49   1         SYNCDELAY;
+  50   1      
+  51   1      
+  52   1         EP1OUTCFG = 0xA0;
+  53   1         EP1INCFG = 0xA0;
+  54   1      
+  55   1         // out endpoints do not come up armed
+C51 COMPILER V7.07   SPI1FIFOIN                                                            05/19/2020 11:37:33 PAGE 2   
+
+  56   1         EP1OUTBC = 0x00; // arm EP1OUT by writing any value
+  57   1         SYNCDELAY;
+  58   1      
+  59   1         // bit-bang SPI
+  60   1         OEA = 0x89; // 1xxx_1x01
+  61   1         SPI_CS = 1;
+  62   1         SPI_CLK = 0;
+  63   1         MOSI = 0;
+  64   1      
+  65   1      
+  66   1         EP2CFG = 0xE8; // IN, Bulk, 1024, Quad
+  67   1      
+  68   1         IFCONFIG = 0x43; // slave FIFO interface, external IFCLK
+  69   1      
+  70   1         FIFORESET = 0x80; // activate NAK-ALL to avoid race conditions
+  71   1         SYNCDELAY;
+  72   1         FIFORESET = 0x82; // Reset FIFO 2
+  73   1         SYNCDELAY;
+  74   1         FIFORESET = 0x00; // Release NAKALL
+  75   1         SYNCDELAY;
+  76   1      
+  77   1         EP2FIFOCFG = 0x0C; // EP2 is AUTOOUT=0, AUTOIN=1, ZEROLEN=1, WORDWIDE=0
+  78   1         SYNCDELAY;
+  79   1         EP2AUTOINLENH = 0x04;
+  80   1         SYNCDELAY;
+  81   1         EP2AUTOINLENL = 0x00;
+  82   1         SYNCDELAY;
+  83   1      }
+  84          
+  85          void TD_Poll(void)              // Called repeatedly while the device is idle
+  86          {
+  87   1         // bit-bang SPI
+  88   1         if (!(EP01STAT & bmBIT1))
+  89   1         {
+  90   2            BYTE count = EP1OUTBC;
+  91   2            BYTE i;
+  92   2      
+  93   2            SPI_CS = 0;
+  94   2            for( i = 0; i < count; i++ )
+  95   2            {
+  96   3               EP1INBUF[i] = SPIXferByte(EP1OUTBUF[i]);
+  97   3            }
+  98   2            SPI_CS = 1;
+  99   2      
+ 100   2            EP1INBC = EP1OUTBC;       // arm EP1IN
+ 101   2            EP1OUTBC = 0x00;          // re(arm) EP1OUT by writing any value
+ 102   2         }
+ 103   1      }
+ 104          
+ 105          BOOL TD_Suspend(void)          // Called before the device goes into suspend mode
+ 106          {
+ 107   1         return(TRUE);
+ 108   1      }
+ 109          
+ 110          BOOL TD_Resume(void)          // Called after the device resumes
+ 111          {
+ 112   1         return(TRUE);
+ 113   1      }
+ 114          
+ 115          //-----------------------------------------------------------------------------
+ 116          // Device Request hooks
+ 117          //   The following hooks are called by the end point 0 device request parser.
+C51 COMPILER V7.07   SPI1FIFOIN                                                            05/19/2020 11:37:33 PAGE 3   
+
+ 118          //-----------------------------------------------------------------------------
+ 119          
+ 120          BOOL DR_GetDescriptor(void)
+ 121          {
+ 122   1         return(TRUE);
+ 123   1      }
+ 124          
+ 125          BOOL DR_SetConfiguration(void)   // Called when a Set Configuration command is received
+ 126          {
+ 127   1         Configuration = SETUPDAT[2];
+ 128   1         return(TRUE);            // Handled by user code
+ 129   1      }
+ 130          
+ 131          BOOL DR_GetConfiguration(void)   // Called when a Get Configuration command is received
+ 132          {
+ 133   1         EP0BUF[0] = Configuration;
+ 134   1         EP0BCH = 0;
+ 135   1         EP0BCL = 1;
+ 136   1         return(TRUE);            // Handled by user code
+ 137   1      }
+ 138          
+ 139          BOOL DR_SetInterface(void)       // Called when a Set Interface command is received
+ 140          {
+ 141   1         AlternateSetting = SETUPDAT[2];
+ 142   1         return(TRUE);            // Handled by user code
+ 143   1      }
+ 144          
+ 145          BOOL DR_GetInterface(void)       // Called when a Set Interface command is received
+ 146          {
+ 147   1         EP0BUF[0] = AlternateSetting;
+ 148   1         EP0BCH = 0;
+ 149   1         EP0BCL = 1;
+ 150   1         return(TRUE);            // Handled by user code
+ 151   1      }
+ 152          
+ 153          BOOL DR_GetStatus(void)
+ 154          {
+ 155   1         return(TRUE);
+ 156   1      }
+ 157          
+ 158          BOOL DR_ClearFeature(void)
+ 159          {
+ 160   1         return(TRUE);
+ 161   1      }
+ 162          
+ 163          BOOL DR_SetFeature(void)
+ 164          {
+ 165   1         return(TRUE);
+ 166   1      }
+ 167          
+ 168          BOOL DR_VendorCmnd(void)
+ 169          {
+ 170   1         switch (SETUPDAT[1])
+ 171   1         {
+ 172   2            default:
+ 173   2               return(TRUE);
+ 174   2         }
+ 175   1      
+ 176   1         return(FALSE);
+ 177   1      }
+ 178          
+ 179          //-----------------------------------------------------------------------------
+C51 COMPILER V7.07   SPI1FIFOIN                                                            05/19/2020 11:37:33 PAGE 4   
+
+ 180          // USB Interrupt Handlers
+ 181          //   The following functions are called by the USB interrupt jump table.
+ 182          //-----------------------------------------------------------------------------
+ 183          
+ 184          // Setup Data Available Interrupt Handler
+ 185          void ISR_Sudav(void) interrupt 0
+ 186          {
+ 187   1         GotSUD = TRUE;            // Set flag
+ 188   1         EZUSB_IRQ_CLEAR();
+ 189   1         USBIRQ = bmSUDAV;         // Clear SUDAV IRQ
+ 190   1      }
+ 191          
+ 192          // Setup Token Interrupt Handler
+ 193          void ISR_Sutok(void) interrupt 0
+ 194          {
+ 195   1         EZUSB_IRQ_CLEAR();
+ 196   1         USBIRQ = bmSUTOK;         // Clear SUTOK IRQ
+ 197   1      }
+ 198          
+ 199          void ISR_Sof(void) interrupt 0
+ 200          {
+ 201   1         EZUSB_IRQ_CLEAR();
+ 202   1         USBIRQ = bmSOF;            // Clear SOF IRQ
+ 203   1      }
+ 204          
+ 205          void ISR_Ures(void) interrupt 0
+ 206          {
+ 207   1         // whenever we get a USB reset, we should revert to full speed mode
+ 208   1         pConfigDscr = pFullSpeedConfigDscr;
+ 209   1         ((CONFIGDSCR xdata *) pConfigDscr)->type = CONFIG_DSCR;
+ 210   1         pOtherConfigDscr = pHighSpeedConfigDscr;
+ 211   1         ((CONFIGDSCR xdata *) pOtherConfigDscr)->type = OTHERSPEED_DSCR;
+ 212   1      
+ 213   1         EZUSB_IRQ_CLEAR();
+ 214   1         USBIRQ = bmURES;         // Clear URES IRQ
+ 215   1      }
+ 216          
+ 217          void ISR_Susp(void) interrupt 0
+ 218          {
+ 219   1         Sleep = TRUE;
+ 220   1         EZUSB_IRQ_CLEAR();
+ 221   1         USBIRQ = bmSUSP;
+ 222   1      }
+ 223          
+ 224          void ISR_Highspeed(void) interrupt 0
+ 225          {
+ 226   1         if (EZUSB_HIGHSPEED())
+ 227   1         {
+ 228   2            pConfigDscr = pHighSpeedConfigDscr;
+ 229   2            ((CONFIGDSCR xdata *) pConfigDscr)->type = CONFIG_DSCR;
+ 230   2            pOtherConfigDscr = pFullSpeedConfigDscr;
+ 231   2            ((CONFIGDSCR xdata *) pOtherConfigDscr)->type = OTHERSPEED_DSCR;
+ 232   2         }
+ 233   1      
+ 234   1         EZUSB_IRQ_CLEAR();
+ 235   1         USBIRQ = bmHSGRANT;
+ 236   1      }
+ 237          void ISR_Ep0ack(void) interrupt 0
+ 238          {
+ 239   1      }
+ 240          void ISR_Stub(void) interrupt 0
+ 241          {
+C51 COMPILER V7.07   SPI1FIFOIN                                                            05/19/2020 11:37:33 PAGE 5   
+
+ 242   1      }
+ 243          void ISR_Ep0in(void) interrupt 0
+ 244          {
+ 245   1      }
+ 246          void ISR_Ep0out(void) interrupt 0
+ 247          {
+ 248   1      }
+ 249          void ISR_Ep1in(void) interrupt 0
+ 250          {
+ 251   1      }
+ 252          void ISR_Ep1out(void) interrupt 0
+ 253          {
+ 254   1      }
+ 255          void ISR_Ep2inout(void) interrupt 0
+ 256          {
+ 257   1      }
+ 258          void ISR_Ep4inout(void) interrupt 0
+ 259          {
+ 260   1      }
+ 261          void ISR_Ep6inout(void) interrupt 0
+ 262          {
+ 263   1      }
+ 264          void ISR_Ep8inout(void) interrupt 0
+ 265          {
+ 266   1      }
+ 267          void ISR_Ibn(void) interrupt 0
+ 268          {
+ 269   1      }
+ 270          void ISR_Ep0pingnak(void) interrupt 0
+ 271          {
+ 272   1      }
+ 273          void ISR_Ep1pingnak(void) interrupt 0
+ 274          {
+ 275   1      }
+ 276          void ISR_Ep2pingnak(void) interrupt 0
+ 277          {
+ 278   1      }
+ 279          void ISR_Ep4pingnak(void) interrupt 0
+ 280          {
+ 281   1      }
+ 282          void ISR_Ep6pingnak(void) interrupt 0
+ 283          {
+ 284   1      }
+ 285          void ISR_Ep8pingnak(void) interrupt 0
+ 286          {
+ 287   1      }
+ 288          void ISR_Errorlimit(void) interrupt 0
+ 289          {
+ 290   1      }
+ 291          void ISR_Ep2piderror(void) interrupt 0
+ 292          {
+ 293   1      }
+ 294          void ISR_Ep4piderror(void) interrupt 0
+ 295          {
+ 296   1      }
+ 297          void ISR_Ep6piderror(void) interrupt 0
+ 298          {
+ 299   1      }
+ 300          void ISR_Ep8piderror(void) interrupt 0
+ 301          {
+ 302   1      }
+ 303          void ISR_Ep2pflag(void) interrupt 0
+C51 COMPILER V7.07   SPI1FIFOIN                                                            05/19/2020 11:37:33 PAGE 6   
+
+ 304          {
+ 305   1      }
+ 306          void ISR_Ep4pflag(void) interrupt 0
+ 307          {
+ 308   1      }
+ 309          void ISR_Ep6pflag(void) interrupt 0
+ 310          {
+ 311   1      }
+ 312          void ISR_Ep8pflag(void) interrupt 0
+ 313          {
+ 314   1      }
+ 315          void ISR_Ep2eflag(void) interrupt 0
+ 316          {
+ 317   1      }
+ 318          void ISR_Ep4eflag(void) interrupt 0
+ 319          {
+ 320   1      }
+ 321          void ISR_Ep6eflag(void) interrupt 0
+ 322          {
+ 323   1      }
+ 324          void ISR_Ep8eflag(void) interrupt 0
+ 325          {
+ 326   1      }
+ 327          void ISR_Ep2fflag(void) interrupt 0
+ 328          {
+ 329   1      }
+ 330          void ISR_Ep4fflag(void) interrupt 0
+ 331          {
+ 332   1      }
+ 333          void ISR_Ep6fflag(void) interrupt 0
+ 334          {
+ 335   1      }
+ 336          void ISR_Ep8fflag(void) interrupt 0
+ 337          {
+ 338   1      }
+ 339          void ISR_GpifComplete(void) interrupt 0
+ 340          {
+ 341   1      }
+ 342          void ISR_GpifWaveform(void) interrupt 0
+ 343          {
+ 344   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    533    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      2       2
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
