@@ -79,13 +79,3 @@ CYC2_SDR_FX2LPプロジェクトは、Intel Cyclone II FPGAとCypress EZ-USB FX2
 [https://github.com/Rapidnack/CsrpServer](https://github.com/Rapidnack/CsrpServer)
 
 [https://github.com/Rapidnack/gr-rapidnack](https://github.com/Rapidnack/gr-rapidnack)
-
-[https://github.com/Rapidnack/Spi1FifoIn](https://github.com/Rapidnack/Spi1FifoIn)
-
-[https://github.com/Rapidnack/MAX1000_SDR_FX2LP](https://github.com/Rapidnack/MAX1000_SDR_FX2LP)
-
-[https://github.com/Rapidnack/MAX10FB_SDR_FX2LP](https://github.com/Rapidnack/MAX10FB_SDR_FX2LP)
-
-[https://github.com/Rapidnack/CYC4_SDR_FX2LP](https://github.com/Rapidnack/CYC4_SDR_FX2LP)
-
-[https://github.com/Rapidnack/CYC2_SDR_FX2LP](https://github.com/Rapidnack/CYC2_SDR_FX2LP)
