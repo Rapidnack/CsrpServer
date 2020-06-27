@@ -89,14 +89,6 @@ set_location_assignment PIN_M1 -to FD[4]
 set_location_assignment PIN_K1 -to FD[5]
 set_location_assignment PIN_M2 -to FD[6]
 set_location_assignment PIN_K2 -to FD[7]
-set_global_assignment -name QIP_FILE romsin.qip
-set_global_assignment -name QIP_FILE ram16x256.qip
-set_global_assignment -name VERILOG_FILE MyNCO.v
-set_global_assignment -name VERILOG_FILE MyFIR.v
-set_global_assignment -name VERILOG_FILE MyCIC.v
-set_global_assignment -name QIP_FILE QsysCore/synthesis/QsysCore.qip
-set_global_assignment -name VERILOG_FILE top.v
-set_global_assignment -name QIP_FILE pll.qip
 set_location_assignment PIN_L12 -to ADC[0]
 set_location_assignment PIN_J12 -to ADC[1]
 set_location_assignment PIN_J13 -to ADC[2]
@@ -113,4 +105,14 @@ set_location_assignment PIN_E1 -to SLWR
 set_location_assignment PIN_C2 -to SLRD
 set_location_assignment PIN_J2 -to SLOE
 set_location_assignment PIN_K10 -to PKTEND
+set_global_assignment -name VERILOG_FILE MySendToFX2LP.v
+set_global_assignment -name QIP_FILE ram16x64.qip
+set_global_assignment -name VERILOG_FILE MyRAM16x256.v
+set_global_assignment -name QIP_FILE romsin.qip
+set_global_assignment -name VERILOG_FILE MyNCO.v
+set_global_assignment -name VERILOG_FILE MyFIR.v
+set_global_assignment -name VERILOG_FILE MyCIC.v
+set_global_assignment -name QIP_FILE QsysCore/synthesis/QsysCore.qip
+set_global_assignment -name VERILOG_FILE top.v
+set_global_assignment -name QIP_FILE pll.qip
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

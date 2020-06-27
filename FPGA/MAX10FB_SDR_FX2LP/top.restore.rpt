@@ -1,5 +1,5 @@
 Restore Archived Project report for top
-Sat Apr 27 15:07:51 2019
+Sat Jun 27 19:07:41 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------+
 ; Restore Archived Project Summary                                        ;
 +---------------------------------+---------------------------------------+
-; Restore Archived Project Status ; Successful - Sat Apr 27 15:07:51 2019 ;
+; Restore Archived Project Status ; Successful - Sat Jun 27 19:07:41 2020 ;
 ; Revision Name                   ; top                                   ;
 ; Top-level Entity Name           ; top                                   ;
 ; Family                          ; MAX 10                                ;
@@ -46,7 +46,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------+
 ; Restore Archived Project Messages ;
 +-----------------------------------+
-Info: Successfully restored 'C:/intelFPGA_lite/18.1/projects/MAX10FB_SDR_Frontend/top_tmp_archive.qar' into the 'C:/intelFPGA_lite/18.1/projects/MAX10FB_SDR_FX2LP/' directory
+Info: Successfully restored 'C:/intelFPGA_lite/18.1/projects/MAX10FB_SDR_FX2LP_copy/top_tmp_archive.qar' into the 'C:/intelFPGA_lite/18.1/projects/MAX10FB_SDR_FX2LP/' directory
 Info: Generated report 'top.restore.rpt'
 
 
@@ -59,6 +59,9 @@ Info: Generated report 'top.restore.rpt'
 ; MyCIC.v                                                                                       ;
 ; MyFIR.v                                                                                       ;
 ; MyNCO.v                                                                                       ;
+; MyRAM16x256.v                                                                                 ;
+; MySendToFX2LP.v                                                                               ;
+; MySendToFX2LP_hw.tcl                                                                          ;
 ; QsysCore.qsys                                                                                 ;
 ; QsysCore.sopcinfo                                                                             ;
 ; QsysCore/QsysCore.cmp                                                                         ;
@@ -66,10 +69,8 @@ Info: Generated report 'top.restore.rpt'
 ; QsysCore/synthesis/QsysCore.qip                                                               ;
 ; QsysCore/synthesis/QsysCore.regmap                                                            ;
 ; QsysCore/synthesis/QsysCore.v                                                                 ;
-; QsysCore/synthesis/submodules/QsysCore_avalon_st_adapter.v                                    ;
-; QsysCore/synthesis/submodules/QsysCore_avalon_st_adapter_timing_adapter_0.sv                  ;
+; QsysCore/synthesis/submodules/MySendToFX2LP.v                                                 ;
 ; QsysCore/synthesis/submodules/QsysCore_fifo_0.sdc                                             ;
-; QsysCore/synthesis/submodules/QsysCore_fifo_0.v                                               ;
 ; QsysCore/synthesis/submodules/QsysCore_mm_interconnect_0.v                                    ;
 ; QsysCore/synthesis/submodules/QsysCore_mm_interconnect_0_avalon_st_adapter.v                  ;
 ; QsysCore/synthesis/submodules/QsysCore_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv ;
@@ -81,6 +82,8 @@ Info: Generated report 'top.restore.rpt'
 ; QsysCore/synthesis/submodules/QsysCore_mm_interconnect_0_rsp_mux.sv                           ;
 ; QsysCore/synthesis/submodules/QsysCore_pio_0.v                                                ;
 ; QsysCore/synthesis/submodules/SPISlaveToAvalonMasterBridge.v                                  ;
+; QsysCore/synthesis/submodules/altera_avalon_dc_fifo.sdc                                       ;
+; QsysCore/synthesis/submodules/altera_avalon_dc_fifo.v                                         ;
 ; QsysCore/synthesis/submodules/altera_avalon_packets_to_master.v                               ;
 ; QsysCore/synthesis/submodules/altera_avalon_packets_to_master_inst_for_spichain.v             ;
 ; QsysCore/synthesis/submodules/altera_avalon_sc_fifo.v                                         ;
@@ -89,6 +92,7 @@ Info: Generated report 'top.restore.rpt'
 ; QsysCore/synthesis/submodules/altera_avalon_st_packets_to_bytes.v                             ;
 ; QsysCore/synthesis/submodules/altera_avalon_st_packets_to_bytes_inst_for_spichain.v           ;
 ; QsysCore/synthesis/submodules/altera_avalon_st_pipeline_base.v                                ;
+; QsysCore/synthesis/submodules/altera_dcfifo_synchronizer_bundle.v                             ;
 ; QsysCore/synthesis/submodules/altera_merlin_arbitrator.sv                                     ;
 ; QsysCore/synthesis/submodules/altera_merlin_burst_uncompressor.sv                             ;
 ; QsysCore/synthesis/submodules/altera_merlin_master_agent.sv                                   ;
@@ -100,6 +104,7 @@ Info: Generated report 'top.restore.rpt'
 ; QsysCore/synthesis/submodules/altera_reset_controller.sdc                                     ;
 ; QsysCore/synthesis/submodules/altera_reset_controller.v                                       ;
 ; QsysCore/synthesis/submodules/altera_reset_synchronizer.v                                     ;
+; QsysCore/synthesis/submodules/altera_std_synchronizer_nocut.v                                 ;
 ; QsysCore/synthesis/submodules/channel_adapter_btop_for_spichain.v                             ;
 ; QsysCore/synthesis/submodules/channel_adapter_ptob_for_spichain.v                             ;
 ; QsysCore/synthesis/submodules/spiphyslave.sdc                                                 ;
@@ -111,10 +116,10 @@ Info: Generated report 'top.restore.rpt'
 ; pll.v                                                                                         ;
 ; pll_bb.v                                                                                      ;
 ; pll_inst.v                                                                                    ;
-; ram16x256.qip                                                                                 ;
-; ram16x256.v                                                                                   ;
-; ram16x256_bb.v                                                                                ;
-; ram16x256_inst.v                                                                              ;
+; ram16x64.qip                                                                                  ;
+; ram16x64.v                                                                                    ;
+; ram16x64_bb.v                                                                                 ;
+; ram16x64_inst.v                                                                               ;
 ; romsin.mif                                                                                    ;
 ; romsin.qip                                                                                    ;
 ; romsin.v                                                                                      ;

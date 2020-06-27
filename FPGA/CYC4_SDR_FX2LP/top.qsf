@@ -96,10 +96,11 @@ set_location_assignment PIN_33 -to SPI_NSS
 set_location_assignment PIN_60 -to SLRD
 set_location_assignment PIN_59 -to SLWR
 set_location_assignment PIN_64 -to IFCLK
+set_global_assignment -name QIP_FILE ram16x64.qip
+set_global_assignment -name VERILOG_FILE MyRAM16x256.v
 set_global_assignment -name VERILOG_FILE MySendToFX2LP.v
 set_global_assignment -name QIP_FILE QsysCore/synthesis/QsysCore.qip
 set_global_assignment -name QIP_FILE romsin.qip
-set_global_assignment -name QIP_FILE ram16x256.qip
 set_global_assignment -name QIP_FILE pll.qip
 set_global_assignment -name VERILOG_FILE MyNCO.v
 set_global_assignment -name VERILOG_FILE MyFIR.v

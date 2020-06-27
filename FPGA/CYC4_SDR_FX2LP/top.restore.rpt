@@ -1,5 +1,5 @@
 Restore Archived Project report for top
-Thu May 09 22:43:09 2019
+Sat Jun 27 18:38:48 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------+
 ; Restore Archived Project Summary                                        ;
 +---------------------------------+---------------------------------------+
-; Restore Archived Project Status ; Successful - Thu May 09 22:43:09 2019 ;
+; Restore Archived Project Status ; Successful - Sat Jun 27 18:38:48 2020 ;
 ; Revision Name                   ; top                                   ;
 ; Top-level Entity Name           ; top                                   ;
 ; Family                          ; Cyclone IV E                          ;
@@ -46,7 +46,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------+
 ; Restore Archived Project Messages ;
 +-----------------------------------+
-Info: Successfully restored 'C:/intelFPGA_lite/18.1/projects/CYC4_SDR_FX2LP_OLD/top_tmp_archive.qar' into the 'C:/intelFPGA_lite/18.1/projects/CYC4_SDR_FX2LP/' directory
+Info: Successfully restored 'C:/intelFPGA_lite/18.1/projects/CYC4_SDR_FX2LP_copy/top_tmp_archive.qar' into the 'C:/intelFPGA_lite/18.1/projects/CYC4_SDR_FX2LP/' directory
 Info: Generated report 'top.restore.rpt'
 
 
@@ -59,6 +59,8 @@ Info: Generated report 'top.restore.rpt'
 ; MyCIC.v                                                                                       ;
 ; MyFIR.v                                                                                       ;
 ; MyNCO.v                                                                                       ;
+; MyRAM16x256.v                                                                                 ;
+; MySendToFX2LP.v                                                                               ;
 ; MySendToFX2LP_hw.tcl                                                                          ;
 ; QsysCore.qsys                                                                                 ;
 ; QsysCore.sopcinfo                                                                             ;
@@ -107,15 +109,16 @@ Info: Generated report 'top.restore.rpt'
 ; QsysCore/synthesis/submodules/spiphyslave.sdc                                                 ;
 ; QsysCore/synthesis/submodules/spiphyslave.v                                                   ;
 ; QsysCore/synthesis/submodules/spislave_inst_for_spichain.v                                    ;
+; assignment_defaults.qdf                                                                       ;
 ; pll.ppf                                                                                       ;
 ; pll.qip                                                                                       ;
 ; pll.v                                                                                         ;
 ; pll_bb.v                                                                                      ;
 ; pll_inst.v                                                                                    ;
-; ram16x256.qip                                                                                 ;
-; ram16x256.v                                                                                   ;
-; ram16x256_bb.v                                                                                ;
-; ram16x256_inst.v                                                                              ;
+; ram16x64.qip                                                                                  ;
+; ram16x64.v                                                                                    ;
+; ram16x64_bb.v                                                                                 ;
+; ram16x64_inst.v                                                                               ;
 ; romsin.mif                                                                                    ;
 ; romsin.qip                                                                                    ;
 ; romsin.v                                                                                      ;
@@ -124,7 +127,6 @@ Info: Generated report 'top.restore.rpt'
 ; top.qpf                                                                                       ;
 ; top.qsf                                                                                       ;
 ; top.v                                                                                         ;
-; assignment_defaults.qdf                                                                       ;
 +-----------------------------------------------------------------------------------------------+
 
 
